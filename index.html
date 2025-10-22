@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>pentru singurul baiat pe care il iubesc</title>
+  <meta name="description" content="mini site" />
+  <style>
+    :root{
+      --bg1: #f6faf6;
+      --bg2: #f3f7f2;
+      --accent: #7e8f82;  /*sage green închis */
+      --accent-2: #9baaa0;
+      --muted: #586058;
+      --card: rgba(255,255,255,0.85);
+      --glass: rgba(255,255,255,0.6);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#222}
+    .wrap{max-width:980px;margin:36px auto;padding:28px}
+
+    header{display:flex;gap:18px;align-items:center}
+    .logo{width:84px;height:84px;border-radius:18px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;box-shadow:0 8px 30px rgba(126,143,130,0.12)}
+    h1{margin:0;font-size:28px;text-transform:lowercase}
+    p.lead{margin:6px 0 0;color:var(--muted);text-transform:lowercase}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:20px;align-items:start}
+    @media(max-width:880px){.hero{grid-template-columns:1fr;}}
+
+    .card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 6px 18px rgba(30,30,50,0.06);backdrop-filter: blur(6px)}
+
+    .message{font-size:16px;line-height:1.45;text-transform:lowercase}
+
+
+    .photo-wrap{position:relative;border-radius:14px;overflow:hidden;height:100%;min-height:260px}
+    .photo-wrap img, .photo-wrap video{width:100%;height:100%;object-fit:cover;display:block}
+    .heart{position:absolute;right:14px;bottom:14px;background:rgba(255,255,255,0.9);padding:8px;border-radius:999px;display:flex;align-items:center;gap:8px}
+
+   
+    .notes{display:flex;flex-direction:column;gap:10px}
+    .note{display:flex;gap:12px;align-items:flex-start}
+    .note .dot{width:10px;height:10px;background:var(--accent);border-radius:10px;margin-top:6px}
+    .note .body{background:var(--glass);padding:12px;border-radius:12px;flex:1;text-transform:lowercase}
+
+
+    .widgets{display:flex;flex-direction:column;gap:12px}
+    .countdown{display:flex;gap:8px;align-items:center;font-weight:600;text-transform:lowercase}
+    .countdown .num{font-size:20px}
+
+
+    form{display:flex;flex-direction:column;gap:8px}
+    textarea{min-height:80px;padding:10px;border-radius:10px;border:1px solid rgba(20,20,30,0.06);resize:vertical}
+    input[type='text']{padding:10px;border-radius:10px;border:1px solid rgba(20,20,30,0.06)}
+    button{padding:10px 14px;border-radius:12px;border:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;font-weight:700;cursor:pointer;text-transform:lowercase}
+
+
+    .slideshow{position:relative;overflow:hidden;border-radius:14px}
+    .slides{display:flex;transition:transform 450ms cubic-bezier(.2,.9,.3,1)}
+    .slide{min-width:100%;padding:18px}
+
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:14px;text-transform:lowercase}
+
+
+    @keyframes pop {0%{transform:scale(.9)}50%{transform:scale(1.12)}100%{transform:scale(1)}}
+    .pulse{animation:pop 600ms infinite alternate}
+
+
+    .ribbon{position:absolute;left:-40px;top:20px;transform:rotate(-18deg);background:var(--accent);color:white;padding:6px 28px;border-radius:10px;font-weight:700;box-shadow:0 8px 20px rgba(126,143,130,0.14);text-transform:lowercase}
+
+ 
+    .float-shape{position:absolute;border-radius:999px;opacity:.12;filter:blur(6px)}
+    .float1{width:180px;height:180px;background:linear-gradient(45deg,#dfeee2,#e6efe6);left:-80px;top:-40px}
+    .float2{width:120px;height:120px;background:linear-gradient(45deg,#f0f6f0,#edf6ee);right:-40px;bottom:-40px}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="float-shape float1" aria-hidden></div>
+    <div class="float-shape float2" aria-hidden></div>
+
+    <header>
+      <div class="logo">D + C</div>
+      <div>
+        <h1>te iubesc scumpu!</h1>
+        <p class="lead">poate mi au folosit la ceva orele de tic</p>
+      </div>
+    </header>
+
+    <main class="hero">
+      <section class="card">
+        <div class="textbox">mi-e dor de tine in permanenta</div>
+        <div class="photo-wrap" style="max-width: 300px; margin: 0;">
+          <img id="mainPhoto" src="https://media.tenor.com/KGnViErYaD8AAAAi/abra%C3%A7ourso.gif" alt="urs" />
+          <div class="heart">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s-7-4.35-9.09-6.6C-0.07 10.63 4.78 5 8.5 7.67 10.3 8.95 12 10.92 12 10.92s1.7-1.97 3.5-3.25C19.22 5 24.07 10.63 21.09 14.4 19 16.65 12 21 12 21z" fill="white" opacity="0.95"/></svg>
+            <div style="font-size:14px">❤️</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" class="message">
+          <strong>20 septembrie 2025 → ∞</strong>
+          <p>♡ esti cel mai perfect baiat dintotdeauna, te iubesc enorm ♡</p>
+        </div>
+
+        <div style="margin-top:26px" class="slideshow">
+          <div class="slides" id="slides">
+            <div class="slide"><img src="POZR/555642591_794447936505936_949817855569984561_n.jpg" alt="ai ochii atat de frumosi" style="width:100%;border-radius:12px;display:block;object-fit:cover;max-height:300px" /></div>
+            <div class="slide"><img src="POZR/stick.webp" alt="amintire 2" style="width:100%;border-radius:12px;display:block;object-fit:cover;max-height:300px" /></div>
+            <div class="slide"><img src="POZR/adele.webp" alt="amintire 3" style="width:100%;border-radius:12px;display:block;object-fit:cover;max-height:300px" /></div>
+          </div>
+        </div>
+        
+        <div style="margin-top:26px" class="message">
+  mi se pare atat de frumos ca putem face orice, chiar si lucruri mici impreuna, insa se simt exponentiale (mate info joke 🤗). imi place ca putem fi comfortabili impreuna,
+putem discuta orice subiect, si mereu se simte corect. de parca asa ar trebui, de parca asa trebuie sa decurga lucrurile si asa ne este menit sa fie.
+am ales culoarea/tematica asta deoarece prima oara cand ne-am vazut mi-ai spus ca iti place sage green! si am zis sa o folosesc :P
+de abia astept sa trec prin tot felul de experiente cu tine, sa imi petrec tot timpul cu tine, sa am un viitor cu tine si sa ma simt euforic constant in preajma ta.
+esti tot ce am vrut vreodata, mai mult de atat, ma tratezi atat de frumos incat uneori nici nu imi vine sa cred CUM te am gasit. insemni enorm de mult pentru mine,
+si la momentul actual esti cea mai valoroasa persoana din viata mea. cu tine ma simt cel mai bine. cu tine ma simt eu. sper sa nu se termine niciodata.
+te iubesc, scumpu meu ♡ 
+</div>
+
+      </section>
+
+      <aside style="position:relative;"> 
+        <div class="card widgets">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <h3 style="margin:0;text-transform:lowercase">noi</h3>
+              <p style="margin:6px 0 0;color:var(--muted);font-size:13px;text-transform:lowercase">sper sa iti placa! macar atat sa stiu sa fac</p>
+            </div>
+            <div style="text-align:right;color:var(--muted);font-size:12px;text-transform:lowercase">facut de denis ❤️</div>
+          </div>
+
+          <div style="margin-top:12px" class="notes">
+            <div class="note">
+              <div class="dot"></div>
+              <div class="body">poza mea preferata cu noi (<strong>din 26 septembrie</strong>) <img src="POZR/552424968_969597855351263_5038220132209452903_n.jpg" alt="noi" style="width:100%;border-radius:12px;">
+</div>
+            </div>
+            <div class="note">
+              <div class="dot"></div>
+              <div class="body">first kiss aici a fost! <img src="POZR/565953209_2774814952717075_1702308247863262481_n.jpg" alt="noi" style="width:100%;border-radius:12px;"></div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;padding-top:8px;border-top:1px dashed rgba(30,30,50,0.06)">
+            <div class="countdown">pana la ziua ta: <span class="num" id="days">--</span> zile</div>
+            <small style="color:var(--muted);text-transform:lowercase">(31 martie) ; PS nu stiu cum sa primesc mesajele de aici inca</small>
+          </div>
+
+          <form id="noteForm" style="margin-top:12px">
+            <input type="text" id="fromName" placeholder="numele tău (ex: denis)" value="pentru scumpu" />
+            <textarea id="noteText" placeholder="scrie un mesaj scurt...">hei iubitu de abia astept sa fiu cu tine iar</textarea>
+            <button type="submit">TE IUBESC</button>
+          </form>
+
+        </div>
+
+      </aside>
+    </main>
+  <script>
+    const TARGET_DATE = '2026-03-31';
+
+    function updateCountdown(){
+      const now = new Date();
+      const then = new Date(TARGET_DATE + 'T00:00:00');
+      const diff = then - now;
+      const days = Math.max(0, Math.floor(diff / (1000 * 60 * 60 * 24)));
+      document.getElementById('days').textContent = days;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000*60*60);
+
+    const slidesEl = document.getElementById('slides');
+    let idx = 0;
+    const total = slidesEl.children.length;
+    setInterval(()=>{
+      idx = (idx + 1) % total;
+      slidesEl.style.transform = `translateX(-${idx * 100}%)`;
+    }, 3500);
+
+    document.getElementById('noteForm').addEventListener('submit', e=>{
+      e.preventDefault();
+      const name = document.getElementById('fromName').value || 'denis';
+      const text = document.getElementById('noteText').value || '';
+      if(!text.trim()) return;
+      const notes = document.querySelector('.notes');
+      const div = document.createElement('div');
+      div.className='note';
+      div.innerHTML = `<div class="dot"></div><div class="body"><strong>${escapeHtml(name)}</strong><p style="margin:6px 0 0;">${escapeHtml(text)}</p></div>`;
+      notes.insertBefore(div, notes.firstChild);
+      document.getElementById('noteText').value = '';
+    });
+
+    document.getElementById('replyForm').addEventListener('submit', e=>{
+      e.preventDefault();
+      const n = document.getElementById('replyName').value || 'călin';
+      const m = document.getElementById('replyMsg').value || '';
+      if(!m.trim()) return;
+      alert('răspuns salvat local — pentru a primi răspunsuri online, conectează un serviciu de formulare (ex: formspree).');
+      document.getElementById('replyName').value='';
+      document.getElementById('replyMsg').value='';
+    });
+        function escapeHtml(unsafe) {
+      return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    const mainPhoto = document.getElementById('mainPhoto');
+    mainPhoto.addEventListener('dragover', e=>e.preventDefault());
+    mainPhoto.addEventListener('drop', e=>{
+      e.preventDefault();
+      const file = e.dataTransfer.files[0];
+      if(!file) return;
+      const url = URL.createObjectURL(file);
+      mainPhoto.src = url;
+    });
+
+
+    let pulsing = false;
+    document.addEventListener('keydown', e=>{
+      if(e.key.toLowerCase() === 'h'){
+        pulsing = !pulsing;
+        document.querySelector('.heart').classList.toggle('pulse', pulsing);
+      }
+    });
+
+  </script>
+</body>
+</html>
